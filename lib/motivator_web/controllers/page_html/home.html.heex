@@ -1,7 +1,42 @@
-<.flash_group flash={@flash} />
-<div class="left-[40rem] fixed inset-y-0 right-0 z-0 hidden lg:block xl:left-[50rem]">
-  <img src="https://i.ytimg.com/vi/_39CT3KpGzU/maxresdefault.jpg" />
-  <p>Autor: <%= @data["autor"] %></p>
-  <p>Frase: <%= @data["frase"] %></p>
+<!-- lib/nome_do_projeto_web/templates/index.html.eex -->
 
-</div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Aleatório</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .content {
+      background-image:  url("https://img.freepik.com/fotos-gratis/ponte-de-madeira-para-a-praia-durante-o-por-do-sol_181624-18247.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1714521600&semt=ais");
+      background-repeat: no-repeat, no-repeat;
+      background-size: cover;
+      height: 90vh;
+      border-radius: 10px;
+    }
+    .content-inner {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 20px;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="content-inner">
+      <p><%= @data["frase"] %> - <%= @data["autor"] %></p>
+    </div>
+  </div>
+</body>
+</html>

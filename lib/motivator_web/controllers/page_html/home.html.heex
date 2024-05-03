@@ -19,22 +19,33 @@
       background-repeat: no-repeat, no-repeat;
       background-size: cover;
       height: 90vh;
-      border-radius: 10px;
     }
     .content-inner {
       background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
       padding: 20px;
       color: white;
       font-weight: bold;
     }
+    .btn-download {
+      background: #0c8bd7;
+      color: white;
+      padding: 1%;
+      border-radius: 6px
+    }
+    .btn-download:hover {
+      background: #096095;
+
+    }
   </style>
 </head>
 <body>
-  <div class="content">
+  <div id='image_div' class="content">
     <div class="content-inner">
       <p><%= @phrase["frase"] %> - <%= @phrase["autor"] %></p>
     </div>
   </div>
+  <button id="downloadButton" class="btn-download">Baixar Imagem</button>
+  <script src="assets/utils.js" />
+  <script src="assets/html2canvas.js" />
 </body>
 </html>
